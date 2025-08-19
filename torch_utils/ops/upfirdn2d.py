@@ -117,7 +117,7 @@ def setup_filter(f, device=torch.device('cpu'), normalize=True, flip_filter=Fals
 
 #----------------------------------------------------------------------------
 
-def upfirdn2d(x, f, up=1, down=1, padding=0, flip_filter=False, gain=1, impl='cuda'):
+def upfirdn2d(x, f, up=1, down=1, padding=0, flip_filter=False, gain=1, impl='ref'):
     r"""Pad, upsample, filter, and downsample a batch of 2D images.
 
     Performs the following sequence of operations for each channel:
