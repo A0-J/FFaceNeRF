@@ -108,7 +108,7 @@ if __name__ == "__main__":
         with torch.no_grad():
             input1_dir = f'./data/ws/ws{img_num:04d}.pt'
             input2_dir = f'./data/camera_params/c{img_num:04d}.pt'
-            label_dir = f'./data/labels_62/label{img_num:04d}.pt'
+            label_dir = f'./data/labels_base/label{img_num:04d}.pt'
             ws = torch.load(input1_dir).to(device)
             camera_params = torch.load(input2_dir).to(device)
 
@@ -126,19 +126,6 @@ if __name__ == "__main__":
     print(f'average miou: ', avg_miou)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
 
 
 
