@@ -43,7 +43,7 @@ Download [Data](https://drive.google.com/file/d/16ha-UeU2uLZu7YNYPXw-I1yIHyav2E0
 ## Evaluation
     python evaluate.py --network networks/ckpt_eyes_10.pth
 
-## Visuaize
+## Visualize
     python visualize_results.py --id 70
 
 
