@@ -1,3 +1,57 @@
+## Install Environment via Anaconda (Recommended)
+    conda env create -f environment.yml
+    conda activate ffacenerf
+
+## Pretrained Model & Dataset
+
+FFaceNeRF requires NeRFFaceEditing checkpoints for initialization
+
+put [pretrained_model](https://drive.google.com/file/d/1N4y3leKEF7rbMVNbpYUYtNnaO4WVDln1/view?usp=drive_link) into networks/NeRFFaceEditing-ffhq-64.pkl
+
+Download [Data](https://drive.google.com/file/d/16ha-UeU2uLZu7YNYPXw-I1yIHyav2E0O/view?usp=drive_link) for training and testing
+
+## Install Dependencies
+    pip install opencv-python requests mrcfile tqdm tensorboard imageio matplotlib scikit-learn ninja
+
+## StyleGAN3 & EG3D Setup
+    cd ~
+    git clone https://github.com/NVlabs/stylegan3.git
+    git clone https://github.com/NVlabs/eg3d.git
+
+    # copy dependencies
+    cp -r ~/stylegan3/dnnlib ~/FFaceNeRF/dnnlib
+    cp ~/eg3d/eg3d/camera_utils.py ~/FFaceNeRF/camera_utils.py
+
+    # set environment path (current session)
+    export PYTHONPATH=$PYTHONPATH:/data/users/ksh/stylegan3
+
+    # set environment path permanently
+    echo 'export PYTHONPATH=$PYTHONPATH:/data/users/ksh/stylegan3' >> ~/.bashrc
+    source ~/.bashrc
+
+    # cp 안될경우
+    wget https://raw.githubusercontent.com/NVlabs/stylegan3/main/camera_utils.py
+
+## Install PyTorch (CUDA 12.1)
+    conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+
+## Training
+    python train_ffacenerf.py --mode eyes
+    #python train_ffacenerf.py --mode nose
+    #python train_ffacenerf.py --mode chin
+
+## Evaluation
+    python evaluate.py --network networks/ckpt_eyes_10.pth
+
+## Visuaize
+    python visualize_results.py --id 70
+
+
+
+
+
+---
+
 # FFaceNeRF
 ### [CVPR2025] FFaceNeRF: Few-shot Face Editing in Neural Radiance Fields
 
