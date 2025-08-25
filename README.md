@@ -40,6 +40,9 @@ Download [Data](https://drive.google.com/file/d/16ha-UeU2uLZu7YNYPXw-I1yIHyav2E0
     #python train_ffacenerf.py --mode nose
     #python train_ffacenerf.py --mode chin
 
+## Testing
+    python editing_testset.py --mode eyes --network ckpt_eyes_10.pth --overlap_weight 0.5
+
 ## Evaluation
     python evaluate.py --network networks/ckpt_eyes_10.pth
 
