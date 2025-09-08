@@ -1,3 +1,6 @@
+## conda active
+    conda activate base
+
 ## Install Environment via Anaconda (Recommended)
     conda env create -f environment.yml
     conda activate ffacenerf
