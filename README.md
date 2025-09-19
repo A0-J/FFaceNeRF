@@ -30,7 +30,7 @@ Download [Data](https://drive.google.com/file/d/16ha-UeU2uLZu7YNYPXw-I1yIHyav2E0
     source ~/.bashrc
 
 
-## cp 안될경우
+### cp 안될경우
     wget https://raw.githubusercontent.com/NVlabs/stylegan3/main/camera_utils.py
 
 ## Install PyTorch (CUDA 12.1)
