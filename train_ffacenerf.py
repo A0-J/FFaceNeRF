@@ -171,7 +171,7 @@ def train(args):
 
 
     with open("./networks/NeRFFaceEditing-ffhq-64.pkl", "rb") as f:
-        G = torch.load(f, map_location='cpu')['G_ema'].to(device).eval().requires_grad_(False)
+        G = pickle.load(f)['G_ema'].to(device).eval().requires_grad_(False)
     
 
 

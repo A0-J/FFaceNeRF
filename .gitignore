@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and tensorboard
+*.log
+runs/
+logs/
+*.tfevents.*
+
+# Model checkpoints / large binaries
+*.pkl
+*.ckpt
+*.pt
+*.onnx
+
+# Data / large files
+data/
+datasets/
+*.npz
+*.npy
+
+# OS
+.DS_Store
+Thumbs.db
